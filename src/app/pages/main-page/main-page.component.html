@@ -1,0 +1,49 @@
+<mat-card>
+    <mat-card-title>Basic Use Case</mat-card-title>
+    <mat-card-content>
+      <mat-sidenav-container>
+        <mat-sidenav #start mode="side">
+          Start Side Drawer
+          <br>
+          <button mat-raised-button color="primary" (click)="start.close()">Close</button>
+          <br>
+          <button mat-raised-button color="primary" (click)="end.open()">Open End Side</button>
+          <br>
+          <button mat-raised-button color="primary"
+                  (click)="start.mode = (start.mode == 'push' ? 'over' : (start.mode == 'over' ? 'side' : 'push'))">
+            Toggle Mode
+          </button>
+          <div>Mode: {{start.mode}}</div>
+        </mat-sidenav>
+
+        <mat-sidenav #end align="end">
+          End Side Drawer
+          <br>
+          <button mat-raised-button color="primary" (click)="end.close()">Close</button>
+        </mat-sidenav>
+
+        <div>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae, cum dolore enim itaque laborum
+            maiores modi molestias nulla perferendis quod, repellendus sunt tempore, ut voluptates? A architecto,
+            cumque deserunt dicta dignissimos dolores magni maiores minus, nisi non odio possimus tenetur veniam!
+            Aliquam cum nisi reiciendis ut vero! Accusamus assumenda blanditiis, consectetur dignissimos ducimus esse
+            eum facere fuga illum libero nam nesciunt quaerat, quam quas quia quod quos saepe sed, tenetur voluptas?
+            Dolorum eaque ex explicabo facere fugiat pariatur quas recusandae saepe similique unde! Earum hic impedit
+            laboriosam maxime minima pariatur placeat repellendus vero! Aspernatur consequuntur deserunt error natus,
+            officiis perspiciatis suscipit ut! Blanditiis dolor ipsum non voluptatibus. Aliquid, doloremque eius eos
+            iusto necessitatibus nihil nobis optio quam quasi qui quidem quisquam ratione reiciendis vel veniam! Ad,
+            adipisci aliquid at consequuntur dignissimos est iusto laboriosam molestias natus non nulla provident
+            quaerat, quis quod suscipit tempore tenetur ullam vel voluptates voluptatum?
+          </div>
+
+          <div>
+            <header>Sidenav</header>
+            <button mat-raised-button color="primary" (click)="start.toggle()">Toggle Start Side Drawer</button>
+            <button mat-raised-button color="primary" (click)="end.toggle()">Toggle End Side Drawer</button>
+          </div>
+        </div>
+      </mat-sidenav-container>
+    </mat-card-content>
+  </mat-card>
+  <router-outlet></router-outlet>
